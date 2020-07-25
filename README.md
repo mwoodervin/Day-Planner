@@ -1,5 +1,5 @@
-##  Daily Planner Application
-
+##  Day Planner Application
+https://mwoodervin.github.io/Day-Planner/
 
 ## This Day Planner is designed to help busy employees manage their daily schedules and contains the following features:
 
