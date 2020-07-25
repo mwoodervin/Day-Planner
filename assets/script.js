@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     // Set date in header
     let today = moment();
-    $("#currentDay").text(today.format("dddd | LL | H mm a"));
+    $("#currentDay").text(today.format("dddd | LL | h mm a"));
     // now = moment().hour(6);
 
     // Function to Create Calendar
@@ -72,23 +72,15 @@ $(document).ready(function () {
         let inputText = $(this).parent().parent().find("textarea")[0].value;
         let textBox = $(this).parent().parent().find("textarea")[0];
         let inputHour = $(this).parent().parent().find(".hour")[0].dataset.hour;
+
         localStorage.removeItem(inputHour);
         console.log(inputText);
-        text.val("");
-    }
-    //     console.log(inputText);
-    //         if(inputText) {
-    //         inputText.innerHTML = "";
-    //         }
-    // }
+        console.log(textBox);
 
-// console.log(text.val);
-//     console.log(moment().hour());
-    // console.log(now.format("h"));
-    // console.log($(".hour").val());
+        text[0].empty();
 
-// if (!moment().hour() === now) {
-//     console.log("no match");
+        // inputText.text = [];
+       }
 
     // function hourHighlightUpdate() {
     //     // let currentHour = today;
