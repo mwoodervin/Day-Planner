@@ -70,14 +70,13 @@ $(document).ready(function () {
 
     function clearToDo() {
         let inputText = $(this).parent().parent().find("textarea")[0].value;
-        let textBox = $(this).parent().parent().find("textarea")[0];
-        let inputHour = $(this).parent().parent().find(".hour")[0].dataset.hour;
+        // let textBox = $(this).parent().parent().find("textarea")[0];
+        // let inputHour = $(this).parent().parent().find(".hour")[0].dataset.hour;
 
         localStorage.removeItem(inputHour);
         console.log(inputText);
-        console.log(textBox);
 
-        text[0].empty();
+        $((".textarea")[0]).remove();
 
         // inputText.text = [];
        }
