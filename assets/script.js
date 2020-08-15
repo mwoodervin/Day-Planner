@@ -39,11 +39,11 @@ $(document).ready(function () {
 
             let saveDiv = $("<button>").addClass("col-1 btn saveBtn");
             saveBtnIcon = $("<i>").addClass("fas fa-save fa-2x d-flex align-items-top justify-content-center");
-            clearBtnIcon = $("<i>").addClass("fas fa-backspace fa-2x d-flex align-items-bottom justify-content-center");
+            // clearBtnIcon = $("<i>").addClass("fas fa-backspace fa-2x d-flex align-items-bottom justify-content-center");
 
             todoDiv.text(todoItem);
 
-            $(".container").append(rowSetDiv.append(timeBlock, todoDiv, saveDiv.append(saveBtnIcon,clearBtnIcon)));
+            $(".container").append(rowSetDiv.append(timeBlock, todoDiv, saveDiv.append(saveBtnIcon)));
 
             if (today.isAfter(now, "hour")) {
                 todoDiv.addClass("past");
@@ -70,8 +70,6 @@ $(document).ready(function () {
 
     function clearToDo() {
         let inputText = $(this).parent().parent().find("textarea")[0].value;
-        // let textBox = $(this).parent().parent().find("textarea")[0];
-        // let inputHour = $(this).parent().parent().find(".hour")[0].dataset.hour;
 
         localStorage.removeItem(inputHour);
         console.log(inputText);
@@ -80,21 +78,6 @@ $(document).ready(function () {
 
         // inputText.text = [];
        }
-
-    // function hourHighlightUpdate() {
-    //     // let currentHour = today;
-    //     // let currentTimeBlock = now;
-    //     // if (!moment().hour() == now) {
-    //     //     console.log("no match");
-    //         //     if (today.isAfter(now, "hour")) {
-    //         //         todoDiv.addClass("past");
-    //         //     } else if (today.isBefore(now, "hour")) {
-    //         //         todoDiv.addClass("future");
-    //         //     } else {
-    //         //         todoDiv.addClass("present");
-    //         //     }
-    //     }
-    // })
 
     // CLICK EVENTS
     // To load calendar when page is opened
